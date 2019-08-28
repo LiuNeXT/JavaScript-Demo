@@ -1,0 +1,77 @@
+npm -i -g  全局安装
+npm list
+npm install ant-design-vue --save
+npm cache clean -f     nodejs 清空 npm 缓存
+ npm install npm -g    npm 命令来升级
+ npm prune
+ npm outdated：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新
+ npm init：会引导你创建一个package.json文件，包括名称、版本、作者这些信息等
+ npm install <name> -g   将包安装到全局环境中
+
+ node的安装分为全局模式和本地模式。
+一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。
+在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。
+
+npm root：查看当前包的安装路径
+npm root -g：查看全局的包的安装路径
+
+npm run serve/npm run dev
+
+npm run build.
+
+yarn run build
+yarn run server
+
+
+到项目目录下的config文件夹里的index.js文件中,将build对象下的assetsPublicPath中的“/”，改为“./”即可，就在前面加个点就可以了，
+
+
+vue-cli目录解析：
+build 文件夹：用于存放 webpack 相关配置和脚本。开发中仅 偶尔使用 到此文件夹下 webpack.base.conf.js 用于配置 less、sass等css预编译库，或者配置一下 UI 库。
+config 文件夹：主要存放配置文件，用于区分开发环境、线上环境的不同。 常用到此文件夹下 config.js 配置开发环境的 端口号、是否开启热加载 或者 设置生产环境的静态资源相对路径、是否开启gzip压缩、npm run build 命令打包生成静态资源的名称和路径等。
+dist 文件夹：默认 npm run build 命令打包生成的静态资源文件，用于生产部署。
+node_modules：存放npm命令下载的开发环境和生产环境的依赖包。
+src: 存放项目源码及需要引用的资源文件。
+src下assets：存放项目中需要用到的资源文件，css、js、images等。
+src下componets：存放vue开发中一些公共组件：header.vue、footer.vue等。
+src下emit：自己配置的vue集中式事件管理机制。
+src下router：vue-router vue路由的配置文件。
+src下service：自己配置的vue请求后台接口方法。
+src下page：存在vue页面组件的文件夹。
+src下util：存放vue开发过程中一些公共的.js方法。
+src下vuex：存放 vuex 为vue专门开发的状态管理器。
+src下app.vue：使用标签<route-view></router-view>渲染整个工程的.vue组件。
+src下main.js：vue-cli工程的入口文件。
+index.html：设置项目的一些meta头信息和提供<div id="app"></div>用于挂载 vue 节点。
+package.json：用于 node_modules资源部 和 启动、打包项目的 npm 命令管理。
+
+
+
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+借助 babel-plugin-component，我们可以只引入需要的组件，以达到减小项目体积的目的。
+babel-plugin-component
+npm install babel-plugin-component -D
+
+
+import { Button, Select } from 'element-ui';
+
+Vue.component(Button.name, Button);
+Vue.component(Select.name, Select);
+/* 或写为
+ * Vue.use(Button)
+ * Vue.use(Select)
+ */
+
+ font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+ <i class="el-icon-edit"></i>
+<i class="el-icon-share"></i>
+<i class="el-icon-delete"></i>
+<el-button type="primary" icon="el-icon-search">搜索</el-button>
+
