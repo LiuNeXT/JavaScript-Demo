@@ -1,7 +1,7 @@
-npm -i -g  全局安装
-npm list
-npm install ant-design-vue --save
-npm cache clean -f     nodejs 清空 npm 缓存
+ npm -i -g  全局安装
+ npm list
+ npm install ant-design-vue --save
+ npm cache clean -f     nodejs 清空 npm 缓存
  npm install npm -g    npm 命令来升级
  npm prune
  npm outdated：检查包是否已经过时，此命令会列出所有已经过时的包，可以及时进行包的更新
@@ -69,9 +69,50 @@ Vue.component(Select.name, Select);
  */
 
  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+style='font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;'
+
 
  <i class="el-icon-edit"></i>
 <i class="el-icon-share"></i>
 <i class="el-icon-delete"></i>
 <el-button type="primary" icon="el-icon-search">搜索</el-button>
+
+css样式中
+#app{
+    //表达id=“app”样式
+}
+
+.app{
+    //表达class="app"样式
+}
+
+
+h2,
+h3,
+p {
+        orphans: 3;
+        widows: 3
+    }
+
+.label {
+        border: 1px solid #000  }
+
+.table {
+        border-collapse: collapse !important
+    }
+
+
+AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+Post请求的两种编码格式：
+form的enctype属性为编码方式，
+常用有两种：
+application/x-www-form-urlencoded和multipart/form-data，
+默认为application/x-www-form-urlencoded。
+ajax.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+文件上传
+上传文件也要指定编码格式为multipart/form-data。
 
